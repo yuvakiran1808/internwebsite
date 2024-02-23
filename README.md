@@ -7,7 +7,7 @@ Click here to view app : (https://aquerawebsite.netlify.app/)
 You can clone the website from (https://github.com/yuvakiran1808/internwebsite.git)
 
 Go to the project directory 
-### cd aqueraapp
+### `cd aqueraapp`
 
 Run the following command:
 ### `npm start`
