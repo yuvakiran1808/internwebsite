@@ -54,7 +54,7 @@ p{
 .pagination-nav
 {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .hero-container{
