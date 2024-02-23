@@ -23,7 +23,7 @@ const cardVariants = {
 
 const Home = () => {
   const [data, setData] = useState([]);
-  const [planetCount, setPlanetCount] = useState(1);
+  const [planetCount] = useState(1);
   const [startCount, setStartCount] = useState(0);
 
   useEffect(() => {
