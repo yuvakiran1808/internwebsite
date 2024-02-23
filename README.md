@@ -1,6 +1,7 @@
 ### Introduction
 This app basically displays the list of planets which are fetched from the API
 
+Click here to view app : (https://aquerawebsite.netlify.app/)
 
 ### Running this project locally
 You can clone the website from (https://github.com/yuvakiran1808/internwebsite.git)
