@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Deployment Link
-[Preview Here](https://aquerawebsite.netlify.app/)
+Click here to view the website : [Preview Here](https://aquerawebsite.netlify.app/)
 
 ## Available Scripts
 
