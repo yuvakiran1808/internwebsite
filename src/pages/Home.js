@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import "../index.css";
 
+// Variants for Framer Motion animations
+
 const cardVariants = {
   offscreen: {
     opacity: 0,
@@ -21,11 +23,15 @@ const cardVariants = {
   exit: { opacity: 0 },
 };
 
+// Functional component for the Home page
 const Home = () => {
+  //  State for storing planet data, planet count per page, and starting count for pagination
   const [data, setData] = useState([]);
   const [planetCount] = useState(1);
   const [startCount, setStartCount] = useState(0);
 
+
+  // Fetching planet data from SWAPI on component mount
   useEffect(() => {
     const fetchPlanetData = () => {
       fetch("https://swapi.dev/api/planets/?format=json")
@@ -39,6 +45,7 @@ const Home = () => {
     fetchPlanetData();
   }, []);
 
+    // Extracting the current page's data based on startCount and planetCount
   const currentPageData = data.slice(startCount, startCount + planetCount);
 
   return (
@@ -134,5 +141,7 @@ const Home = () => {
     </div>
   );
 };
+
+// Exporting the Home component
 
 export default Home;

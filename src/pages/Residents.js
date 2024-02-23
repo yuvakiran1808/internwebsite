@@ -1,23 +1,30 @@
 import React, { useState, useEffect } from "react";
 
+// Functional component to display details of residents of a planet
+
 const Residents = ({ eachplanet }) => {
   const [residents, setResidents] = useState([]);
+
+  // Fetching resident data when the component mounts or when eachplanet.residents changes
+
   useEffect(() => {
     const fetchResidents = async () => {
       try {
         const residentPromises = eachplanet.residents.map(
           async (residentUrl) => {
             const response = await fetch(residentUrl);
+            // Handling errors if the URL is not found
+
             if (!response.ok) {
               console.log("Url not found");
               return null;
             }
-
             const residentData = await response.json();
             return residentData;
           }
         );
 
+        // Waiting for all resident promises to resolve and updating state
         const residentData = await Promise.all(residentPromises);
 
         setResidents(residentData);
@@ -25,8 +32,11 @@ const Residents = ({ eachplanet }) => {
         console.log("Url not found");
       }
     };
+    // Calling the fetchResidents function
     fetchResidents();
   }, [eachplanet.residents]);
+
+  // Rendering the component
 
   return (
     <div>
